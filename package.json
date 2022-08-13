@@ -1,0 +1,77 @@
+{
+  "name": "firstmile-web",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@devexpress/dx-react-core": "^2.7.3",
+    "@devexpress/dx-react-scheduler": "^2.7.3",
+    "@devexpress/dx-react-scheduler-material-ui": "^2.7.3",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.11.2",
+    "@progress/kendo-data-query": "^1.5.4",
+    "@progress/kendo-drawing": "^1.9.3",
+    "@progress/kendo-licensing": "^1.1.3",
+    "@progress/kendo-react-animation": "^3.17.0",
+    "@progress/kendo-react-buttons": "^3.17.0",
+    "@progress/kendo-react-charts": "^4.1.0",
+    "@progress/kendo-react-data-tools": "^3.17.0",
+    "@progress/kendo-react-dateinputs": "^3.17.0",
+    "@progress/kendo-react-dialogs": "^3.17.0",
+    "@progress/kendo-react-dropdowns": "^3.17.0",
+    "@progress/kendo-react-form": "^3.17.0",
+    "@progress/kendo-react-grid": "^3.17.0",
+    "@progress/kendo-react-indicators": "^3.17.0",
+    "@progress/kendo-react-inputs": "^3.17.0",
+    "@progress/kendo-react-intl": "^3.18.0",
+    "@progress/kendo-react-labels": "^3.17.0",
+    "@progress/kendo-react-layout": "^3.17.0",
+    "@progress/kendo-react-progressbars": "^3.17.0",
+    "@progress/kendo-theme-bootstrap": "^4.31.0",
+    "@progress/kendo-theme-material": "^3.19.2",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.19.2",
+    "bootstrap": "^4.5.2",
+    "google-map-react": "^2.1.9",
+    "google-maps-react": "^2.0.6",
+    "hammerjs": "^2.0.8",
+    "jquery": "^3.5.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
+    "node-sass": "^5.0.0",
+    "numeral": "^2.0.6",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.3.0",
+    "react-dom": "^16.13.1",
+    "react-floating-button": "^1.1.1",
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.3",
+    "react-tooltip": "^4.2.13",
+    "redux": "^4.0.5",
+    "redux-immutable-state-invariant": "^2.1.0",
+    "redux-thunk": "^2.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

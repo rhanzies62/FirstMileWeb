@@ -1,0 +1,57 @@
+@media (min-width: 1200px) {
+  .googlemap {
+    height: 80vh;
+  }
+}
+
+/*IPAD PRO LANDSCAPE*/
+@media (max-width: 1366px) {
+  .googlemap {
+    height: 80vh;
+    /* width: 612px; */
+  }
+}
+
+@media (min-width: 1024px) and (min-height: 1366px) {
+  .googlemap {
+    height: 40vh;
+    /* width: 879px; */
+  }
+
+  /* .mapContainer {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  } */
+}
+
+/*IPAD PRO PORTRAIT AND IPAD LANDSCAPE*/
+@media (max-width: 1024px) and (max-height: 768px) {
+  .googlemap {
+    height: 75vh;
+    /* width: 440px; */
+  }
+}
+
+/*IPAD PORTRAIT*/
+@media (max-width: 768px) {
+  .googlemap {
+    height: 40vh;
+    /* width: 646px; */
+  }
+}
+
+/*IPHONE X PORTRAIT*/
+@media (max-width: 375px) {
+  .googlemap {
+    height: 80vh;
+    /* width: 334px; */
+  }
+}
+
+/*IPHONE X LANDSCAPE*/
+@media (max-width: 812px) {
+    .googlemap {
+      height: 40vh;
+      /* width: 695px; */
+    }
+  }

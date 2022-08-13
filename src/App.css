@@ -1,0 +1,109 @@
+body {
+  background-color: #f2f2f2 !important;
+}
+.full-width {
+  width: 100% !important;
+}
+
+.margin-top-10 {
+  margin-top: 10%;
+}
+
+.k-animation-container {
+  z-index: 10003;
+}
+
+@media (min-width: 992px) {
+  .no-padding-x-lg {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+@media (min-width: 768px) {
+  .no-padding-x-md {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+}
+@media (min-width: 576px) {
+  .px-sm-5 {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+  }
+  .no-padding-x-sm {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+}
+@media (max-width: 575px) {
+  .no-padding-x-xs {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+}
+
+.k-daterangepicker-wrap .k-textbox-container {
+  width: 49% !important;
+}
+
+.k-form .k-form-field,
+.k-form .k-form-buttons,
+.k-form .k-daterangepicker .k-textbox-container {
+  margin-top: 0px !important;
+}
+
+.marker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  user-select: none;
+  transform: translate(-50%, -50%);
+}
+
+.markerDetailed:hover {
+  cursor: pointer;
+}
+
+.markerDetailed {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 85px;
+  border: 2px solid #fff;
+  background-color: #fff;
+  user-select: none;
+  transform: translate(-50%, -50%);
+  border-left: 5px solid;
+}
+
+.smaller {
+  font-size: 70%;
+  font-weight: 400;
+}
+
+.k-state-active .k-animation-container {
+  width: 100% !important;
+}
+
+.graphContent .k-content {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+.loading:hover {
+  cursor: progress;
+}
+
+.selected {
+  background-color: #e6f5ff !important;
+  border: 1px solid #99d6ff !important;
+}
+
+.large-modal {
+  max-width: 800px;
+}
