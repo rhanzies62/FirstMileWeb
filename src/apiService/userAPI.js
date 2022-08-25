@@ -159,3 +159,19 @@ export async function ListAllMeilie(filter) {
     return e.response.data;
   }
 }
+
+export async function GetMeili(id) {
+  const config = {
+    method: "get",
+    url: `${baseUrl}/GetMeili?id=${id}`,
+    headers: {
+      authorization: `bearer ${localStorage.getItem("token")}`,
+    },
+  };
+  try {
+    let result = await axios(config);
+    return result.data;
+  } catch (e) {
+    return null;
+  }
+}

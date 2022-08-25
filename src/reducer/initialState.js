@@ -1,6 +1,7 @@
 import BookingFormPage from "../screen/pages/BookingFormPage";
 import BookingPage from "../screen/pages/BookingPage";
 import CustomerFormPage from "../screen/pages/CustomerFormPage";
+import CustomerMeiliDetailPage from "../screen/pages/CustomerMeiliDetailPage";
 import CustomerMeiliPage from "../screen/pages/CustomerMeiliPage";
 import CustomerPage from "../screen/pages/CustomerPage";
 import DashboardPage from "../screen/pages/DashboardPage";
@@ -135,6 +136,11 @@ export default {
       Exact: false,
       Path: "/meili",
       Component: CustomerMeiliPage
+    },
+    {
+      Exact: false,
+      Path: "/meiliDetails/:id",
+      Component: CustomerMeiliDetailPage
     },
     {
       Exact: false,

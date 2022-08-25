@@ -186,7 +186,7 @@ class CustomerFormPage extends Component {
             <fieldset>
               <div className="row">
                 <div className="col-md-6">
-                  <label class="form-label" class="pb-0 mb-0">
+                  <label class="form-label pb-0 mb-0">
                     *Name:
                   </label>
                   <input
@@ -198,7 +198,7 @@ class CustomerFormPage extends Component {
                     value={this.state.customer.Name}
                   />
 
-                  <label class="form-label" class="pb-0 mb-0">
+                  <label class="form-label pb-0 mb-0">
                     *Address:
                   </label>
                   <input
@@ -210,7 +210,7 @@ class CustomerFormPage extends Component {
                     value={this.state.customer.Address}
                   />
 
-                  <label class="form-label" class="pb-0 mb-0">
+                  <label class="form-label pb-0 mb-0">
                     *Email:
                   </label>
                   <input
@@ -222,7 +222,7 @@ class CustomerFormPage extends Component {
                     value={this.state.customer.Email}
                   />
 
-                  <label class="form-label" class="pb-0 mb-0">
+                  <label class="form-label pb-0 mb-0">
                     *Phone:
                   </label>
                   <MaskedTextBox
@@ -234,7 +234,7 @@ class CustomerFormPage extends Component {
                   />
                 </div>
                 <div className="col-md-6">
-                  <label class="form-label" class="pb-0 mb-0">
+                  <label class="form-label pb-0 mb-0">
                     *Country:
                   </label>
                   <DropDownList
@@ -256,7 +256,7 @@ class CustomerFormPage extends Component {
                     }}
                   />
 
-                  <label class="form-label" class="pb-0 mb-0">
+                  <label class="form-label pb-0 mb-0">
                     *Province:
                   </label>
                   <DropDownList
@@ -276,7 +276,7 @@ class CustomerFormPage extends Component {
                     }}
                   />
 
-                  <label class="form-label" class="pb-0 mb-0">
+                  <label class="form-label pb-0 mb-0">
                     *City:
                   </label>
                   <input
@@ -287,7 +287,7 @@ class CustomerFormPage extends Component {
                     value={this.state.customer.City}
                   />
 
-                  <label class="form-label" class="pb-0 mb-0">
+                  <label class="form-label pb-0 mb-0">
                     *PostalCode:
                   </label>
                   <input

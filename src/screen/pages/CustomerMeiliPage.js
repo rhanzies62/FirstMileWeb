@@ -58,6 +58,7 @@ export class CustomerMeiliPage extends Component {
         Searchs: [],
       },
       sort: ["asc", "desc"],
+      showMeiliDetailsModal: false
     };
   }
 
@@ -135,17 +136,23 @@ export class CustomerMeiliPage extends Component {
               data={this.state.meilieData.data}
               onRowClick={({ dataItem }) => {
                 if(this.props.auth.userType !== "1"){
-                  this.setState({
-                    meiliModel: {
-                      ...dataItem,
-                      selectedEquipment: this.lookUpDropdownValue(dataItem.EquipmentId,"engoEquipments"),
-                      selectedSubscription: this.lookUpDropdownValue(dataItem.SubscriptionId,"subscriptionList"),
-                      selectedCamera: this.lookUpDropdownValue(dataItem.CameraId, "CameraList"),
-                      selectedFileDestination: this.lookUpDropdownValue(dataItem.FileDestination,"FileDestination"),
-                      selectedEncoders: this.lookUpDropdownValue(dataItem.EncoderId, "Encoders")
-                    },
-                    showModal: true
-                  });
+                  if(dataItem.StatusId === 3){
+                    this.setState({
+                      showMeiliDetailsModal: true
+                    });
+                  } else {
+                    this.setState({
+                      meiliModel: {
+                        ...dataItem,
+                        selectedEquipment: this.lookUpDropdownValue(dataItem.EquipmentId,"engoEquipments"),
+                        selectedSubscription: this.lookUpDropdownValue(dataItem.SubscriptionId,"subscriptionList"),
+                        selectedCamera: this.lookUpDropdownValue(dataItem.CameraId, "CameraList"),
+                        selectedFileDestination: this.lookUpDropdownValue(dataItem.FileDestination,"FileDestination"),
+                        selectedEncoders: this.lookUpDropdownValue(dataItem.EncoderId, "Encoders")
+                      },
+                      showModal: true
+                    });
+                  }
                 }
                 //this.editRow(dataItem);
               }}
@@ -257,6 +264,18 @@ export class CustomerMeiliPage extends Component {
                 }}
                 // columnMenu={ColumnMenu}
               />
+              <Column 
+                field="StatusId"
+                title="Status"
+                filter={"text"}
+                cell={(props) => {
+                  if(props.dataItem.StatusId === 0) return <td>Inactive</td>;
+                  if(props.dataItem.StatusId === 1) return <td>Pending</td>;
+                  if(props.dataItem.StatusId === 2) return <td>Processing</td>;
+                  if(props.dataItem.StatusId === 3) return <td>Active</td>;
+                  if(props.dataItem.StatusId === 4) return <td>Inactive</td>;
+                }}
+              />
             </Grid>
           </div>
         </div>
@@ -270,7 +289,7 @@ export class CustomerMeiliPage extends Component {
           keyboard={false}
         >
           <Modal.Header closeButton>
-            <Modal.Title>Meili Camera 2 Cloud</Modal.Title>
+            <Modal.Title>Job Request</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <div class="container">
@@ -369,6 +388,32 @@ export class CustomerMeiliPage extends Component {
           <Modal.Footer>
             <Button variant="secondary" onClick={this.submitMeili}>
               Submit
+            </Button>
+          </Modal.Footer>
+        </Modal>
+        <Modal
+          size="lg"
+          show={this.state.showMeiliDetailsModal}
+          onHide={() => {
+            this.setState({ showMeiliDetailsModal: false });
+          }}
+          data-focus="false"
+          backdrop="static"
+          keyboard={false}>
+          <Modal.Header closeButton>
+            <Modal.Title>Job Request Details</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <div class="container">
+              <div class="col-8">
+
+              </div>
+              <div class="col-4"></div>
+            </div>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={() => { this.setState({ showMeiliDetailsModal: false }); }}>
+                Close
             </Button>
           </Modal.Footer>
         </Modal>
