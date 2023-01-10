@@ -24,6 +24,7 @@ import $ from "jquery";
 import BookingDetailsModal from "./BookingDetailsModal";
 import { FloatingLabel } from "@progress/kendo-react-labels";
 import BookingTypeLabel from "../components/BookingTypeLabel";
+import BookingEquipmentNotesModal from "./BookingEquipmentNotesModal";
 
 class CustomCell extends React.Component {
   constructor(props) {
@@ -113,6 +114,10 @@ class BookingPage extends Component {
       selectedSort: "desc",
       sort: ["asc", "desc"],
       originalList: [],
+      selectedEquipment: null,
+      displayNotesModal: false,
+      selectedSaleEquipmentId: 0,
+      selectedEquipmentId: 0
     };
   }
 
@@ -602,6 +607,13 @@ class BookingPage extends Component {
                     showBookingModal: !this.state.showBookingModal,
                   });
                 }}
+                onOpenNotes={(be) => {
+                  this.setState({
+                    displayNotesModal: true,
+                    selectedSaleEquipmentId: be.SaleEquipmentId,
+                    selectedEquipmentId: be.Equipment.EquipmentId
+                  })
+                }}
                 onRemoveCallBack={this.deleteBooking}
                 onRemoveEquipmentCallBack={this.deleteBookingEquipment}
               />
@@ -663,6 +675,17 @@ class BookingPage extends Component {
             onRemoveCallBack={this.deleteBooking}
             onRemoveEquipmentCallBack={this.deleteBookingEquipment}
           />
+        ) : null}
+
+        {this.state.displayNotesModal ? (
+          <BookingEquipmentNotesModal 
+          show={this.state.displayNotesModal}
+          saleEquipmentId={this.state.selectedSaleEquipmentId}
+          equipmentId={this.state.selectedEquipmentId}
+          onHide={() => {
+            this.setState({ displayNotesModal: !this.state.displayNotesModal });
+          }}
+           />
         ) : null}
       </div>
     );

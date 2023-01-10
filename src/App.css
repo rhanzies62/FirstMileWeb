@@ -107,3 +107,7 @@ body {
 .large-modal {
   max-width: 800px;
 }
+
+.noteCard:hover{
+  cursor: pointer;
+}

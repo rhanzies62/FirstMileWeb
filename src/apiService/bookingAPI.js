@@ -252,3 +252,37 @@ export async function DeleteBookingEquipment(bookingEquipmentId){
     return [];
   }
 }
+
+export async function ListBookingEquipmentNote(equipmentId,bookingEquipmentId){
+  const config = {
+    method: "get",
+    url: `${baseUrl}/Booking/ListBookingEquipmentNote?equipmentId=${equipmentId}&bookingEquipmentId=${bookingEquipmentId}`,
+    headers: {
+      authorization: `bearer ${localStorage.getItem("token")}`,
+    },
+  };
+  try {
+    let result = await axios(config);
+    return result.data;
+  } catch (e) {
+    return [];
+  }
+}
+
+export async function AddEquipmentNote(model) {
+  const config = {
+    method: "post",
+    data: model,
+    url: `${baseUrl}/booking/AddEquipmentNote`,
+    headers: {
+      "content-type": "application/json",
+      authorization: `bearer ${localStorage.getItem("token")}`,
+    },
+  };
+  try {
+    let result = await axios(config);
+    return result.data;
+  } catch (e) {
+    return e.response;
+  }
+}

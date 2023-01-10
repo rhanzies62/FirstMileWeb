@@ -302,6 +302,15 @@ class BookingDetails extends Component {
                               </div>
                             </>
                           ) : null}
+                            <div class="col-12">
+                              <hr/>
+                            </div>
+
+                            <div class="col-12 d-flex justify-content-end">
+                              <button class="btn btn-primary btn-sm" onClick={()=>{
+                                this.props.onOpenNotes(be);
+                              }}>Notes ({be.NoteCount})</button>
+                            </div>
                         </div>
                       </div>
                     ))}
